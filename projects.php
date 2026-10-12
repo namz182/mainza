@@ -1,248 +1,67 @@
 <?php include 'includes/header.php' ?>
-<div class="container-fluid">
-    <div class="row justify-content-center">
-        <div class="col-12 col-md-10 col-lg-8">
+<?php require_once 'includes/project-gallery.php' ?>
+<?php require_once 'includes/project-link.php' ?>
+<?php
+$projectUrls = [
+    'mytutor' => null,
+    'pos' => null,
+    'ytdown-cli' => null,
+    'ytdown-gui' => null,
+    'baz' => null,
+    'ips-ids' => null,
+];
+?>
+<main class="feed-container social-layout">
+    <?php include 'includes/sidebars.php' ?>
+    <div class="portfolio-shell">
+        <header class="page-header">
+            <h1 class="page-title">Projects</h1>
+            <p class="page-subtitle">A list of projects I've worked on.</p>
+        </header>
 
-            <div class="page-header">
-                <div class="d-flex align-items-center mb-4">
-                    <div class="status-dot me-2"></div>
-                    <h1 class="page-title">My Projects</h1>
-                </div>
-                <p class="page-subtitle">A showcase of my work in cybersecurity, web development, and other systems.</p>
-            </div>
+        <div class="projects-feed">
+            <article class="project-post card bg-base-100" id="project-mytutor">
+                <h2 class="project-title">MyTutor</h2>
+                <?= project_gallery(['assets/img/screenshots/mytutor.png', 'assets/img/screenshots/mytutor-2.png', 'assets/img/screenshots/mytutor-3.png'], 'MyTutor') ?>
+                <p class="project-description">A peer-to-peer tutoring platform where students connect, schedule sessions, and learn together.</p>
+                <?= project_open_link($projectUrls['mytutor']) ?>
+            </article>
 
-            <div class="project-categories mb-5">
-                <button class="category-btn active" data-category="all">
-                    <i class="fas fa-th me-2"></i>
-                    All Projects
-                </button>
-                <button class="category-btn" data-category="web">
-                    <i class="fas fa-code me-2"></i>
-                    Web Development
-                </button>
-                <button class="category-btn" data-category="security">
-                    <i class="fas fa-shield-alt me-2"></i>
-                    Cybersecurity
-                </button>
-                <button class="category-btn" data-category="other">
-                    <i class="fas fa-cogs me-2"></i>
-                    Other
-                </button>
-            </div>
+            <article class="project-post card bg-base-100" id="project-pos">
+                <h2 class="project-title">POS System</h2>
+                <?= project_gallery(['assets/img/screenshots/pos.jpeg', 'assets/img/screenshots/pos-2.jpeg', 'assets/img/screenshots/pos-3.jpeg'], 'POS System') ?>
+                <p class="project-description">A point-of-sale system for handling sales, inventory, and business reports.</p>
+                <?= project_open_link($projectUrls['pos']) ?>
+            </article>
 
-            <div class="projects-grid">
+            <article class="project-post card bg-base-100" id="project-ytdown-cli">
+                <h2 class="project-title">YouTube Downloader (CLI)</h2>
+                <?= project_gallery(['assets/img/screenshots/ytdown.png'], 'YouTube Downloader command line') ?>
+                <p class="project-description">A command-line tool for downloading individual videos and playlists.</p>
+                <?= project_open_link($projectUrls['ytdown-cli']) ?>
+            </article>
 
-                <div class="project-card-detailed" data-category="web">
-                    <div class="project-image">
-                        <img src="assets/img/screenshots/mytutor.png" alt="MyTutor Platform">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://mytutorzm.com" class="project-link">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
-                                <button class="project-link" data-bs-toggle="modal" data-bs-target="#mytutorModal">
-                                    <i class="fa-solid fa-eye"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <div class="project-icon">
-                                <i class="fas fa-graduation-cap"></i>
-                            </div>
-                            <div class="project-meta">
-                                <h3 class="project-title">MyTutor</h3>
-                                <span class="project-category">Web Development</span>
-                            </div>
-                        </div>
-                        <p class="project-description">
-                            A comprehensive peer-to-peer tutoring platform that connects students for collaborative learning. Features include user authentication, session scheduling, payment integration, and real-time messaging.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">PHP</span>
-                            <span class="tech-tag">Laravel</span>
-                            <span class="tech-tag">MySQL</span>
-                            <span class="tech-tag">Bootstrap</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">Payment Gateways</span>
-                        </div>
-                    </div>
-                </div>
+            <article class="project-post card bg-base-100" id="project-ytdown-gui">
+                <h2 class="project-title">YouTube Downloader (GUI)</h2>
+                <?= project_gallery(['assets/img/screenshots/ytdown-gui.png'], 'YouTube Downloader desktop app') ?>
+                <p class="project-description">A desktop app for downloading videos and playlists through a graphical interface.</p>
+                <?= project_open_link($projectUrls['ytdown-gui']) ?>
+            </article>
 
-                <div class="project-card-detailed" data-category="other">
-                    <div class="project-image">
-                        <img src="assets/img/screenshots/pos.jpeg" alt="Class Register System">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <button class="project-link" data-bs-toggle="modal" data-bs-target="#posModal">
-                                    <i class="fa-solid fa-eye"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <div class="project-icon register-icon">
-                                <i class="fas fa-clipboard-list"></i>
-                            </div>
-                            <div class="project-meta">
-                                <h3 class="project-title">POS System</h3>
-                                <span class="project-category">web | Desktop </span>
-                            </div>
-                        </div>
-                        <p class="project-description">
-                            The system allows businesses to process sales, track inventory, and generate financial reports, invoices, quotations and delivery notes efficiently.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">PHP</span>
-                            <span class="tech-tag">Laravel</span>
-                            <span class="tech-tag">Livewire</span>
-                            <span class="tech-tag">SQLite</span>
-                        </div>
-                    </div>
-                </div>
+            <article class="project-post card bg-base-100" id="project-baz">
+                <h2 class="project-title">BAZ</h2>
+                <?= project_gallery(['assets/img/screenshots/baz2.png', 'assets/img/screenshots/baz.png', 'assets/img/screenshots/baz3.png'], 'BAZ') ?>
+                <p class="project-description">A badminton community website featuring news and event listings.</p>
+                <?= project_open_link($projectUrls['baz']) ?>
+            </article>
 
-                <div class="project-card-detailed" data-category="other">
-                    <div class="project-image">
-                        <img src="assets/img/screenshots/ytdown.png" alt="YTDown">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <!-- <a href="#" class="project-link">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
-                                <a href="#" class="project-link">
-                                    <i class="fab fa-github"></i>
-                                </a> -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <div class="project-icon">
-                                <i class="fa-brands fa-square-youtube"></i>
-                            </div>
-                            <div class="project-meta">
-                                <h3 class="project-title">YouTube Downloader (CLI)</h3>
-                                <span class="project-category">Comand Line</span>
-                            </div>
-                        </div>
-                        <p class="project-description">
-                            Advanced YouTube downloader that allow to download single and playlist YouTube videos
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Yt-dlp</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card-detailed" data-category="other">
-                    <div class="project-image">
-                        <img src="assets/img/screenshots/ytdown-gui.png" alt="ytdown">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <!-- <a href="#" class="project-link">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a> -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <div class="project-icon">
-                                <i class="fa-brands fa-square-youtube"></i>
-                            </div>
-                            <div class="project-meta">
-                                <h3 class="project-title">youtube downloader (GUI)</h3>
-                                <span class="project-category">Desktop</span>
-                            </div>
-                        </div>
-                        <p class="project-description">
-                            Advanced GUI YouTube downloader that allow to download single and playlist YouTube videos.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">python</span>
-                            <span class="tech-tag">Custom Tkinter</span>
-                            <span class="tech-tag">yt-dlp</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card-detailed" data-category="web">
-                    <div class="project-image">
-                        <img src="assets/img/screenshots/baz2.png" alt="baz">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <button class="project-link" data-bs-toggle="modal" data-bs-target="#bazModal">
-                                    <i class="fa-solid fa-eye"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <div class="project-icon">
-                                <i class="fas fa-credit-card"></i>
-                            </div>
-                            <div class="project-meta">
-                                <h3 class="project-title">BAZ</h3>
-                                <span class="project-category">Web Development</span>
-                            </div>
-                        </div>
-                        <p class="project-description">
-                            A responsive website for badminton enthusiasts, offering news and event listings.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">PHP</span>
-                            <span class="tech-tag">Laravel</span>
-                            <span class="tech-tag">MySQL</span>
-                            <span class="tech-tag">Bootstrap</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card-detailed" data-category="security">
-                    <div class="project-image">
-                        <img src="assets/img/screenshots/ips.png" alt="IP">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <!-- <a href="#" class="project-link">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
-                                <a href="#" class="project-link">
-                                    <i class="fab fa-github"></i>
-                                </a> -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <div class="project-icon">
-                                <i class="fas fa-shield-alt"></i>
-                            </div>
-                            <div class="project-meta">
-                                <h3 class="project-title">IPS | IDS</h3>
-                                <span class="project-category">Desktop | Web</span>
-                            </div>
-                        </div>
-                        <p class="project-description">
-                            A <strong>comprehensive cybersecurity solution</strong> combining <strong>Intrusion Prevention System (IPS)</strong> and <strong>Intrusion Detection System (IDS)</strong> capabilities.
-                            <strong>Key Features:</strong>Real-time threat detection & blocking,Network traffic analysis,Automated alerts & incident response,Web-based dashboard for monitoring,Cross-platform compatibility (Windows/Linux)
-                            <br><br>
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Flask</span>
-                            <span class="tech-tag">Scapy</span>
-                            <span class="tech-tag">Bootstrap</span>
-                            <span class="tech-tag">JavaScript</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <article class="project-post card bg-base-100" id="project-ips-ids">
+                <h2 class="project-title">IPS | IDS</h2>
+                <?= project_gallery(['assets/img/screenshots/ips.png'], 'Intrusion prevention and detection system') ?>
+                <p class="project-description">A security monitoring solution that detects suspicious network activity and helps block threats.</p>
+                <?= project_open_link($projectUrls['ips-ids']) ?>
+            </article>
         </div>
     </div>
-</div>
-<?php include 'includes/modals.php' ?>
+</main>
 <?php include 'includes/footer.php' ?>

@@ -1,71 +1,54 @@
 <?php include 'includes/header.php' ?>
-<div class="container-fluid">
-    <div class="row justify-content-center">
-        <div class="col-12 col-md-6 col-lg-6">
-            <div class="hero-card mb-4">
+<main class="feed-container social-layout">
+    <?php include 'includes/sidebars.php' ?>
+    <div class="portfolio-shell">
+            <div class="hero-card card bg-base-100 mb-4">
                 <div class="bg-pattern">
                     <div class="pattern-circle pattern-1"></div>
                     <div class="pattern-circle pattern-2"></div>
                 </div>
 
-                <div class="card-content">
+                <div class="card-content card-body">
 
-                    <div class="d-flex justify-content-between align-items-center mb-4">
-                        <div class="d-flex align-items-center">
-                            <div class="status-dot"></div>
-                            <span class="status-text">Cybersecurity Expert</span>
+                    <div class="hero-main">
+                        <div class="hero-copy">
+                            <h1 class="hero-title">Mainza Namangani</h1>
+                            <p class="hero-subtitle">Cybersecurity enthusiast and web developer based in Zambia, building useful and secure digital experiences.</p>
                         </div>
-                        <div class="availability-badge">
-                            <div class="availability-dot"></div>
-                            AVAILABLE FOR WORK
-                        </div>
-                    </div>
-
-                    <div class="container d-flex justify-content-center">
-                        <div class="row align-items-start mb-4">
-                            <div class="col-12 col-md-12 col-lg-8 mb-4">
-                                <h1 class="hero-title font">Mainza Namangani</h1>
-
-                                <div class="typing-container mb-3">
-                                    <span id="typed-text"></span>
-                                </div>
-
-                                <p class="hero-subtitle">Passionate about security and innovative solutions.</p>
-                            </div>
-                            <div class="col-12 col-md-12 col-lg-4 d-flex justify-content-center">
-                                <div class="profile-image">
-                                    <img src="assets/img/namz.jpg" alt="Mainza Namangani" class="img-fluid">
-                                </div>
+                        <div class="hero-portrait">
+                            <div class="profile-image">
+                                <img src="assets/img/namz.jpg" alt="Mainza Namangani">
                             </div>
                         </div>
                     </div>
 
                     <div class="social-section">
                         <div class="social-links">
-                            <a href="https://www.linkedin.com/in/mainza-namangani-7768b8307/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BO1UHTjTlRhuqt8sHdJotqQ%3D%3D"
-                                target="_blank" class="social-link" title="LinkedIn">
-                                <i class="fab fa-linkedin-in"></i>
+                            <a href="https://www.linkedin.com/in/mainza-namangani-b8b334403" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn" aria-label="LinkedIn">
+                                <?= social_icon('linkedin') ?>
                             </a>
-                            <a href="https://github.com/namz182" target="_blank" class="social-link" title="GitHub">
-                                <i class="fab fa-github"></i>
+                            <a href="https://x.com/mainamz" target="_blank" rel="noopener noreferrer" class="social-link" title="X" aria-label="X">
+                                <?= social_icon('x') ?>
                             </a>
-                            <a href="https://www.instagram.com/mainamz/" target="_blank" class="social-link"
-                                title="Twitter">
-                                <i class="fab fa-instagram"></i>
+                            <a href="https://github.com/namz182" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub" aria-label="GitHub">
+                                <?= social_icon('github') ?>
+                            </a>
+                            <a href="https://www.instagram.com/mainamz/" target="_blank" rel="noopener noreferrer" class="social-link" title="Instagram" aria-label="Instagram">
+                                <?= social_icon('instagram') ?>
                             </a>
                         </div>
                         <a href="assets/files/Mainza Namangani CV.pdf" download="Mainza Namangani CV"
                             class="btn-primary" style="text-decoration: none;">
-                            <i class="fas fa-download me-2"></i>
+                            <i data-lucide="download" aria-hidden="true"></i>
                             Download Resume
                         </a>
                     </div>
                 </div>
             </div>
 
-            <div class="content-section">
+            <div class="content-section card bg-base-100">
                 <h2 class="section-heading">
-                    <i class="fas fa-user-circle me-2"></i>
+                    <i data-lucide="user-round" aria-hidden="true"></i>
                     My Story
                 </h2>
                 <p class="content-text">
@@ -78,18 +61,11 @@
             </div>
 
 
-            <div class="certifications-section">
-                <div class="d-flex justify-content-between align-items-center mb-4">
-                    <div class="d-flex align-items-center">
-                        <div class="status-dot me-2"></div>
-                        <span class="section-title">Certifications</span>
-                    </div>
-                </div>
+            <div class="certifications-section card bg-base-100" id="certifications">
+                <h2 class="section-title">Certifications</h2>
+                <div class="certifications-list">
 
-                <div id="certificationsCarousel" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-
-                        <div class="carousel-item active">
+                        <article class="certification-post">
                             <div class="cert-image-container">
                                 <img src="assets/img/Certs/ethical-hacker.png" alt="Google Cybersecurity Certificate"
                                     class="cert-image">
@@ -99,9 +75,9 @@
                                         methodologies.</p>
                                 </div>
                             </div>
-                        </div>
+                        </article>
 
-                        <div class="carousel-item">
+                        <article class="certification-post">
                             <div class="cert-image-container">
                                 <img src="assets/img/Certs/net-defense.png" alt="Fullstack PHP Training Certificate"
                                     class="cert-image">
@@ -111,9 +87,9 @@
                                         incident response.</p>
                                 </div>
                             </div>
-                        </div>
+                        </article>
 
-                        <div class="carousel-item">
+                        <article class="certification-post">
                             <div class="cert-image-container">
                                 <img src="assets/img/Certs/cyber-threat.png" alt="Fullstack PHP Training Certificate"
                                     class="cert-image">
@@ -122,9 +98,9 @@
                                     <p>Learned how to manage cyber threats.</p>
                                 </div>
                             </div>
-                        </div>
+                        </article>
 
-                        <div class="carousel-item">
+                        <article class="certification-post">
                             <div class="cert-image-container">
                                 <img src="assets/img/Certs/os.png" alt="Fullstack PHP Training Certificate"
                                     class="cert-image">
@@ -132,9 +108,9 @@
                                     <h4>Operating system concepts</h4>
                                 </div>
                             </div>
-                        </div>
+                        </article>
 
-                        <div class="carousel-item">
+                        <article class="certification-post">
                             <div class="cert-image-container">
                                 <img src="assets/img/Certs/net-basics.png" alt="Fullstack PHP Training Certificate"
                                     class="cert-image">
@@ -142,9 +118,9 @@
                                     <h4>Networking basics</h4>
                                 </div>
                             </div>
-                        </div>
+                        </article>
 
-                        <div class="carousel-item">
+                        <article class="certification-post">
                             <div class="cert-image-container">
                                 <img src="assets/img/Certs/endpoint.png" alt="Fullstack PHP Training Certificate"
                                     class="cert-image">
@@ -153,9 +129,9 @@
                                     <p>Learned how to secure Endpoints.</p>
                                 </div>
                             </div>
-                        </div>
+                        </article>
 
-                        <div class="carousel-item">
+                        <article class="certification-post">
                             <div class="cert-image-container">
                                 <img src="assets/img/Certs/python.png" alt="Penetration Testing Certificate"
                                     class="cert-image">
@@ -165,32 +141,17 @@
                                         assessments.</p>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-
-                    <button class="carousel-control-prev" type="button" data-bs-target="#certificationsCarousel"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon"></span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#certificationsCarousel"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon"></span>
-                    </button>
+                        </article>
                 </div>
             </div>
 
-            <div class="skills-section">
-                <div class="d-flex justify-content-between align-items-center mb-4">
-                    <div class="d-flex align-items-center">
-                        <div class="status-dot me-2"></div>
-                        <span class="section-title">Skills</span>
-                    </div>
-                </div>
+            <div class="skills-section card bg-base-100" id="skills">
+                <h2 class="section-title">Skills</h2>
 
                 <div class="skills-grid">
                     <div class="skill-category">
                         <h4 class="skill-category-title">
-                            <i class="fas fa-code me-2"></i>
+                            <i data-lucide="code-xml" aria-hidden="true"></i>
                             Technical & Development
                         </h4>
                         <div class="skills-list">
@@ -212,7 +173,6 @@
                                     <span class="skill-tag">Laravel</span>
                                     <span class="skill-tag">Livewire</span>
                                     <span class="skill-tag">Flask</span>
-                                    <span class="skill-tag">Bootstrap</span>
                                     <span class="skill-tag">React</span>
                                     <span class="skill-tag">Git</span>
 
@@ -233,7 +193,7 @@
 
                     <div class="skill-category">
                         <h4 class="skill-category-title">
-                            <i class="fas fa-shield-alt me-2"></i>
+                            <i data-lucide="shield-check" aria-hidden="true"></i>
                             Cybersecurity
                         </h4>
                         <div class="skills-list">
@@ -253,66 +213,39 @@
                 </div>
             </div>
 
-            <div class="projects-section mb-5">
-                <div class="d-flex justify-content-between align-items-center mb-4">
-                    <div class="d-flex align-items-center">
-                        <div class="status-dot me-2"></div>
-                        <span class="section-title">Recent Projects</span>
-                    </div>
+            <div class="projects-section card bg-base-100 mb-5" id="recent-projects">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="section-title">Recent Projects</h2>
                     <a href="projects.php" class="view-all-btn">
                         View All
-                        <i class="fas fa-arrow-right ms-2"></i>
+                        <i data-lucide="arrow-right" aria-hidden="true"></i>
                     </a>
                 </div>
 
                 <div class="projects-list">
-                    <div class="project-card">
-                        <a href="https://mytutorzm.com" target="_blank" style="text-decoration: none;">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="d-flex align-items-center">
-                                    <div class="project-icon mytutor-icon">
-                                        <i class="fas fa-graduation-cap"></i>
-                                    </div>
-                                    <div class="ms-3">
-                                        <h3 class="project-name">MyTutor</h3>
-                                        <p class="project-desc">Peer to peer tutoring platform</p>
-                                    </div>
-                                </div>
-                                <i class="fas fa-arrow-right project-arrow"></i>
-                            </div>
+                    <article class="project-card project-preview-post">
+                        <h3 class="project-name">MyTutor</h3>
+                        <a href="projects.php#project-mytutor" aria-label="View MyTutor project">
+                            <img src="assets/img/screenshots/mytutor.png" alt="MyTutor platform screenshot">
                         </a>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="d-flex align-items-center">
-                                <div class="project-icon register-icon">
-                                    <i class="fas fa-clipboard-list"></i>
-                                </div>
-                                <div class="ms-3">
-                                    <h3 class="project-name">POS System</h3>
-                                    <p class="project-desc">Managing products and invertory</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="d-flex align-items-center">
-                                <div class="project-icon church-icon">
-                                    <i class="fas fa-church"></i>
-                                </div>
-                                <div class="ms-3">
-                                    <h3 class="project-name">Church Management System</h3>
-                                    <p class="project-desc">Member and event management</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                        <p class="project-desc">A peer-to-peer tutoring platform for connecting students and sharing knowledge.</p>
+                    </article>
+                    <article class="project-card project-preview-post">
+                        <h3 class="project-name">POS System</h3>
+                        <a href="projects.php#project-pos" aria-label="View POS System project">
+                            <img src="assets/img/screenshots/pos.jpeg" alt="Point of sale system screenshot">
+                        </a>
+                        <p class="project-desc">A point of sale system for handling sales, inventory, and business reports.</p>
+                    </article>
+                    <article class="project-card project-preview-post">
+                        <h3 class="project-name">BAZ</h3>
+                        <a href="projects.php#project-baz" aria-label="View BAZ project">
+                            <img src="assets/img/screenshots/baz2.png" alt="BAZ badminton website screenshot">
+                        </a>
+                        <p class="project-desc">A badminton community website featuring news and event listings.</p>
+                    </article>
                 </div>
             </div>
-        </div>
     </div>
-</div>
+</main>
 <?php include 'includes/footer.php' ?>

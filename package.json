@@ -1,0 +1,21 @@
+{
+  "name": "mainza",
+  "version": "1.0.0",
+  "description": "This is a personal portfolio website. It showcases projects, certifications, and contact information.",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run build:css && npm run build:icons",
+    "build:css": "tailwindcss -i assets/css/tailwind.css -o assets/css/app.css",
+    "build:icons": "esbuild assets/js/icon-entry.js --bundle --format=iife --outfile=assets/js/icons.bundle.js",
+    "watch:css": "tailwindcss -i assets/css/tailwind.css -o assets/css/app.css --watch"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "devDependencies": {
+    "@tailwindcss/cli": "4.3.0",
+    "daisyui": "^5.7.47",
+    "esbuild": "^0.28.2",
+    "lucide": "^1.55.0",
+    "tailwindcss": "^4.3.3"
+  }
+}

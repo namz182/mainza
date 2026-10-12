@@ -1,38 +1,38 @@
 <?php include 'includes/header.php' ?>
 
-<div class="container-fluid">
-    <div class="row justify-content-center">
-        <div class="col-12 col-md-8 col-lg-6">
+<main class="feed-container social-layout">
+    <?php include 'includes/sidebars.php' ?>
+    <div class="portfolio-shell">
             <div class="page-header">
-                <div class="d-flex align-items-center mb-4">
-                    <div class="status-dot me-2"></div>
-                    <h1 class="page-title">Get In Touch</h1>
-                </div>
+                <h1 class="page-title">Get In Touch</h1>
                 <p class="page-subtitle">Ready to collaborate? Let's discuss your project and bring your ideas to life.</p>
             </div>
 
 
-            <div class="contact-info">
+            <div class="contact-info card bg-base-100">
                 <h2 class="section-heading">
-                    <i class="fas fa-address-card me-2"></i>
+                    <i class="contact-heading-icon" data-lucide="contact-round" aria-hidden="true"></i>
                     Contact Information
                 </h2>
 
                 <div class="contact-methods">
-                    <div class="contact-method">
+                    <div class="contact-method contact-method--email">
                         <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
+                            <i data-lucide="mail" aria-hidden="true"></i>
                         </div>
                         <div class="contact-details">
                             <h3>Email</h3>
-                            <p>mainamz750@gmail.com</p>
-                            <a href="mailto:mainamz750@gmail.com" class="contact-link">Send Email</a>
+                            <div class="contact-email-list">
+                                <a class="contact-email" href="mailto:mainzanamz@gmail.com">mainzanamz@gmail.com</a>
+                                <a class="contact-email" href="mailto:mainza@michosms.com">mainza@michosms.com</a>
+                                <a class="contact-email" href="mailto:mainamz750@gmail.com">mainamz750@gmail.com</a>
+                            </div>
                         </div>
                     </div>
 
                     <div class="contact-method">
                         <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
+                            <i data-lucide="phone" aria-hidden="true"></i>
                         </div>
                         <div class="contact-details">
                             <h3>Phone</h3>
@@ -43,7 +43,7 @@
 
                     <div class="contact-method">
                         <div class="contact-icon">
-                            <i class="fab fa-whatsapp"></i>
+                            <i data-lucide="message-circle" aria-hidden="true"></i>
                         </div>
                         <div class="contact-details">
                             <h3>WhatsApp</h3>
@@ -53,7 +53,7 @@
 
                     <div class="contact-method">
                         <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
+                            <i data-lucide="map-pin" aria-hidden="true"></i>
                         </div>
                         <div class="contact-details">
                             <h3>Location</h3>
@@ -64,31 +64,35 @@
                 </div>
             </div>
 
-            <div class="contact-social mt-4">
+            <div class="contact-social card bg-base-100 mt-4">
                 <h2 class="section-heading">
-                    <i class="fas fa-share-alt me-2"></i>
+                    <i data-lucide="share-2" aria-hidden="true"></i>
                     Connect With Me
                 </h2>
                 <div class="social-links-contact">
-                    <a href="https://www.linkedin.com/in/mainza-namangani-7768b8307/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BO1UHTjTlRhuqt8sHdJotqQ%3D%3D" class="social-link-contact linkedin">
-                        <i class="fab fa-linkedin-in"></i>
+                    <a href="https://www.linkedin.com/in/mainza-namangani-b8b334403" target="_blank" rel="noopener noreferrer" class="social-link-contact linkedin">
+                        <?= social_icon('linkedin') ?>
                         <span>LinkedIn</span>
                     </a>
-                    <a href="https://github.com/namz182" class="social-link-contact github">
-                        <i class="fab fa-github"></i>
+                    <a href="https://x.com/mainamz" target="_blank" rel="noopener noreferrer" class="social-link-contact x-social">
+                        <?= social_icon('x') ?>
+                        <span>X</span>
+                    </a>
+                    <a href="https://github.com/namz182" target="_blank" rel="noopener noreferrer" class="social-link-contact github">
+                        <?= social_icon('github') ?>
                         <span>GitHub</span>
                     </a>
-                    <a href="https://www.instagram.com/mainamz/" class="social-link-contact instagram">
-                        <i class="fab fa-instagram"></i>
+                    <a href="https://www.instagram.com/mainamz/" target="_blank" rel="noopener noreferrer" class="social-link-contact instagram">
+                        <?= social_icon('instagram') ?>
                         <span>Instagram</span>
                     </a>
                 </div>
             </div>
 
             <div class="response-info">
-                <div class="response-card">
+                <div class="response-card card bg-base-100">
                     <div class="response-icon">
-                        <i class="fas fa-clock"></i>
+                        <i data-lucide="clock" aria-hidden="true"></i>
                     </div>
                     <div class="response-content">
                         <h3>Quick Response</h3>
@@ -96,8 +100,6 @@
                     </div>
                 </div>
             </div>
-        </div>
     </div>
-</div>
-
+</main>
 <?php include 'includes/footer.php' ?>

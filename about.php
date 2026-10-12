@@ -1,20 +1,17 @@
 <?php include 'includes/header.php' ?>
-<div class="container-fluid">
-    <div class="row justify-content-center">
-        <div class="col-12 col-md-6 col-lg-6">
+<main class="feed-container social-layout">
+    <?php include 'includes/sidebars.php' ?>
+    <div class="portfolio-shell">
             <div class="page-header">
-                <div class="d-flex align-items-center mb-4">
-                    <div class="status-dot me-2"></div>
-                    <h1 class="page-title">About Me</h1>
-                </div>
+                <h1 class="page-title">About Me</h1>
                 <p class="page-subtitle">Get to know more about my journey, experience, and passion for
                     cybersecurity and web development.</p>
             </div>
 
             <div class="about-content">
-                <div class="content-section">
+                <div class="content-section card bg-base-100">
                     <h2 class="section-heading">
-                        <i class="fas fa-user-circle me-2"></i>
+                        <i data-lucide="user-round" aria-hidden="true"></i>
                         My Story
                     </h2>
                     <p class="content-text">
@@ -30,9 +27,9 @@
                 </div>
 
                 <!-- Experience -->
-                <div class="content-section">
+                <div class="content-section card bg-base-100">
                     <h2 class="section-heading">
-                        <i class="fas fa-briefcase me-2"></i>
+                        <i data-lucide="briefcase-business" aria-hidden="true"></i>
                         Experience & Education
                     </h2>
                     <div class="experience-timeline">
@@ -96,39 +93,39 @@
                     </div>
                 </div>
 
-                <div class="content-section">
+                <div class="content-section card bg-base-100">
                     <h2 class="section-heading">
-                        <i class="fas fa-heart me-2"></i>
+                        <i data-lucide="heart" aria-hidden="true"></i>
                         Values & Approach
                     </h2>
                     <div class="values-grid">
-                        <div class="value-card">
+                        <div class="value-card card bg-base-100">
                             <div class="value-icon">
-                                <i class="fas fa-shield-alt"></i>
+                                <i data-lucide="shield-check" aria-hidden="true"></i>
                             </div>
                             <h3>Security First</h3>
                             <p>Every solution I build prioritizes security from the ground up, ensuring robust
                                 protection against evolving threats.</p>
                         </div>
-                        <div class="value-card">
+                        <div class="value-card card bg-base-100">
                             <div class="value-icon">
-                                <i class="fas fa-lightbulb"></i>
+                                <i data-lucide="lightbulb" aria-hidden="true"></i>
                             </div>
                             <h3>Innovation</h3>
                             <p>I stay current with emerging technologies and security trends to deliver cutting edge
                                 solutions.</p>
                         </div>
-                        <div class="value-card">
+                        <div class="value-card card bg-base-100">
                             <div class="value-icon">
-                                <i class="fas fa-users"></i>
+                                <i data-lucide="users-round" aria-hidden="true"></i>
                             </div>
                             <h3>Collaboration</h3>
                             <p>I believe in working closely with teams to understand needs and deliver solutions
                                 that truly make a difference.</p>
                         </div>
-                        <div class="value-card">
+                        <div class="value-card card bg-base-100">
                             <div class="value-icon">
-                                <i class="fas fa-graduation-cap"></i>
+                                <i data-lucide="graduation-cap" aria-hidden="true"></i>
                             </div>
                             <h3>Continuous Learning</h3>
                             <p>Technology evolves rapidly, and I'm committed to continuous learning and professional
@@ -137,9 +134,9 @@
                     </div>
                 </div>
 
-                <div class="content-section">
+                <div class="content-section card bg-base-100">
                     <h2 class="section-heading">
-                        <i class="fas fa-music me-2"></i>
+                        <i data-lucide="music-2" aria-hidden="true"></i>
                         Beyond Technology
                     </h2>
                     <p class="content-text">
@@ -154,7 +151,6 @@
                     </div>
                 </div>
             </div>
-        </div>
     </div>
-</div>
+</main>
 <?php include 'includes/footer.php' ?>
