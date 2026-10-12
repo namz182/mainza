@@ -32,6 +32,7 @@
 </footer>
 
 <script src="assets/js/icons.bundle.js?v=<?php echo filemtime('assets/js/icons.bundle.js'); ?>"></script>
+<script src="assets/js/theme-toggle.js?v=<?php echo filemtime('assets/js/theme-toggle.js'); ?>"></script>
 <script src="assets/js/certifications-scroll.js?v=<?php echo filemtime('assets/js/certifications-scroll.js'); ?>"></script>
 <script src="assets/js/photo-viewer.js?v=<?php echo filemtime('assets/js/photo-viewer.js'); ?>"></script>
 </body>

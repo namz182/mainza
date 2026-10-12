@@ -14,6 +14,9 @@
         <a href="projects.php" class="sidebar-link <?php echo basename($_SERVER['PHP_SELF']) === 'projects.php' ? 'active' : ''; ?>">
             <i data-lucide="folder-kanban" aria-hidden="true"></i><span>Projects</span>
         </a>
+        <a href="skills.php" class="sidebar-link <?php echo basename($_SERVER['PHP_SELF']) === 'skills.php' ? 'active' : ''; ?>">
+            <i data-lucide="wrench" aria-hidden="true"></i><span>Skills & tools</span>
+        </a>
         <a href="gallery.php" class="sidebar-link <?php echo basename($_SERVER['PHP_SELF']) === 'gallery.php' ? 'active' : ''; ?>">
             <i data-lucide="image" aria-hidden="true"></i><span>Gallery</span>
         </a>
@@ -26,7 +29,7 @@
     <h2 class="sidebar-heading">Your shortcuts</h2>
     <nav class="sidebar-nav" aria-label="Portfolio shortcuts">
         <a href="index.php#certifications" class="sidebar-link"><i data-lucide="medal" aria-hidden="true"></i><span>Certifications</span></a>
-        <a href="index.php#skills" class="sidebar-link"><i data-lucide="wrench" aria-hidden="true"></i><span>Skills & tools</span></a>
+        <a href="skills.php" class="sidebar-link"><i data-lucide="wrench" aria-hidden="true"></i><span>Skills & tools</span></a>
         <a href="index.php#recent-projects" class="sidebar-link"><i data-lucide="image" aria-hidden="true"></i><span>Featured projects</span></a>
     </nav>
 </aside>

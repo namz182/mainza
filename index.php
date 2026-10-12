@@ -109,70 +109,87 @@ $galleryPreview = array_slice($galleryPreview, 0, 4);
             </div>
 
             <div class="skills-section card bg-base-100" id="skills">
-                <h2 class="section-title">Skills</h2>
+                <div class="projects-section-header">
+                    <h2 class="section-title">Skills & tools</h2>
+                    <a href="skills.php" class="view-all-btn">
+                        View all
+                        <i data-lucide="arrow-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <p class="skills-intro">Practical experience across software development, cybersecurity, and the systems behind reliable applications.</p>
 
                 <div class="skills-grid">
-                    <div class="skill-category">
-                        <h4 class="skill-category-title">
-                            <i data-lucide="code-xml" aria-hidden="true"></i>
-                            Technical & Development
-                        </h4>
-                        <div class="skills-list">
-                            <div class="skill-group">
-                                <h5>Languages</h5>
-                                <div class="skill-tags">
-                                    <span class="skill-tag">Python</span>
-                                    <span class="skill-tag">PHP</span>
-                                    <span class="skill-tag">Java</span>
-                                    <span class="skill-tag">SQL</span>
-                                    <span class="skill-tag">HTML/CSS</span>
-                                    <span class="skill-tag">JavaScript</span>
-                                    <span class="skill-tag">C++</span>
-                                </div>
-                            </div>
-                            <div class="skill-group">
-                                <h5>Frameworks & Tools</h5>
-                                <div class="skill-tags">
-                                    <span class="skill-tag">Laravel</span>
-                                    <span class="skill-tag">Livewire</span>
-                                    <span class="skill-tag">Flask</span>
-                                    <span class="skill-tag">React</span>
-                                    <span class="skill-tag">Git</span>
-
-                                </div>
-                            </div>
-                            <div class="skill-group">
-                                <h5>Databases</h5>
-                                <div class="skill-tags">
-                                    <span class="skill-tag">MySQL</span>
-                                    <span class="skill-tag">SQLite</span>
-                                    <span class="skill-tag">MariaDB</span>
-                                    <span class="skill-tag">PostgreSQL</span>
-                                    <span class="skill-tag">MongoDB</span>
-                                </div>
-                            </div>
+                    <article class="skill-category">
+                        <div class="skill-category-heading">
+                            <span class="skill-category-icon"><i data-lucide="code-xml" aria-hidden="true"></i></span>
+                            <h3 class="skill-category-title">Software development</h3>
                         </div>
-                    </div>
-
-                    <div class="skill-category">
-                        <h4 class="skill-category-title">
-                            <i data-lucide="shield-check" aria-hidden="true"></i>
-                            Cybersecurity
-                        </h4>
-                        <div class="skills-list">
-                            <div class="skill-group">
-                                <h5>Core Skills</h5>
-                                <div class="skill-tags">
-                                    <span class="skill-tag">Penetration Testing</span>
-                                    <span class="skill-tag">Security Awareness</span>
-                                    <span class="skill-tag">Networking</span>
-                                    <span class="skill-tag">Cryptography</span>
-                                    <span class="skill-tag">Digital Forensics</span>
-                                    <span class="skill-tag">Kali linux</span>
-                                </div>
-                            </div>
+                        <p class="skill-category-copy">Building full-stack applications and multi-tenant platforms.</p>
+                        <div class="skill-tags">
+                            <span class="skill-tag">PHP</span>
+                            <span class="skill-tag">Laravel</span>
+                            <span class="skill-tag">Livewire</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">REST APIs</span>
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">Queues & jobs</span>
                         </div>
-                    </div>
+                    </article>
+
+                    <article class="skill-category">
+                        <div class="skill-category-heading">
+                            <span class="skill-category-icon"><i data-lucide="shield-check" aria-hidden="true"></i></span>
+                            <h3 class="skill-category-title">Cybersecurity</h3>
+                        </div>
+                        <p class="skill-category-copy">Security testing, investigation, and practical awareness.</p>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Web application security</span>
+                            <span class="skill-tag">Penetration testing</span>
+                            <span class="skill-tag">Vulnerability assessment</span>
+                            <span class="skill-tag">Digital forensics</span>
+                            <span class="skill-tag">Network analysis</span>
+                            <span class="skill-tag">Kali Linux</span>
+                            <span class="skill-tag">Burp Suite</span>
+                            <span class="skill-tag">Nmap</span>
+                        </div>
+                    </article>
+
+                    <article class="skill-category">
+                        <div class="skill-category-heading">
+                            <span class="skill-category-icon"><i data-lucide="wrench" aria-hidden="true"></i></span>
+                            <h3 class="skill-category-title">Infrastructure & delivery</h3>
+                        </div>
+                        <p class="skill-category-copy">Deploying and maintaining applications and their data.</p>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Linux & Ubuntu</span>
+                            <span class="skill-tag">Nginx</span>
+                            <span class="skill-tag">VPS deployment</span>
+                            <span class="skill-tag">DigitalOcean</span>
+                            <span class="skill-tag">Cloudflare</span>
+                            <span class="skill-tag">SSL/TLS</span>
+                            <span class="skill-tag">MySQL & MariaDB</span>
+                            <span class="skill-tag">Git & GitHub</span>
+                        </div>
+                    </article>
+
+                    <article class="skill-category">
+                        <div class="skill-category-heading">
+                            <span class="skill-category-icon"><i data-lucide="layout-dashboard" aria-hidden="true"></i></span>
+                            <h3 class="skill-category-title">Interfaces & automation</h3>
+                        </div>
+                        <p class="skill-category-copy">Creating clear interfaces and connecting useful workflows.</p>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Flutter & Dart</span>
+                            <span class="skill-tag">Responsive UI</span>
+                            <span class="skill-tag">Dashboard design</span>
+                            <span class="skill-tag">Tailwind CSS</span>
+                            <span class="skill-tag">DaisyUI</span>
+                            <span class="skill-tag">API integrations</span>
+                            <span class="skill-tag">MCP integration</span>
+                            <span class="skill-tag">Python automation</span>
+                        </div>
+                    </article>
                 </div>
             </div>
 
