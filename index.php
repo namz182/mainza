@@ -63,86 +63,43 @@
 
             <div class="certifications-section card bg-base-100" id="certifications">
                 <h2 class="section-title">Certifications</h2>
-                <div class="certifications-list">
-
-                        <article class="certification-post">
-                            <div class="cert-image-container">
-                                <img src="assets/img/Certs/ethical-hacker.png" alt="Google Cybersecurity Certificate"
-                                    class="cert-image">
-                                <div class="cert-overlay">
-                                    <h4>Ethical Hacker</h4>
-                                    <p>Trained in cybersecurity principles, threat analysis, and ethical hacking
-                                        methodologies.</p>
-                                </div>
+                <?php
+                $certifications = [
+                    ['image' => 'ethical-hacker.png', 'title' => 'Ethical Hacker'],
+                    ['image' => 'net-defense.png', 'title' => 'Network Defense'],
+                    ['image' => 'cyber-threat.png', 'title' => 'Cyber Threat Management'],
+                    ['image' => 'os.png', 'title' => 'Operating System Concepts'],
+                    ['image' => 'net-basics.png', 'title' => 'Networking Basics'],
+                    ['image' => 'endpoint.png', 'title' => 'Endpoint Security'],
+                    ['image' => 'python.png', 'title' => 'Python for Security'],
+                ];
+                ?>
+                <div class="certifications-list" role="region" aria-label="Certifications gallery" tabindex="0">
+                    <div class="certifications-track">
+                        <?php foreach ([false, true] as $isDuplicate): ?>
+                            <div class="certifications-group" <?= $isDuplicate ? 'aria-hidden="true"' : '' ?>>
+                                <?php foreach ($certifications as $certification): ?>
+                                    <?php $title = htmlspecialchars($certification['title'], ENT_QUOTES, 'UTF-8'); ?>
+                                    <article class="certification-post">
+                                        <button class="cert-preview-trigger" type="button" <?= $isDuplicate ? 'tabindex="-1"' : '' ?> data-cert-title="<?= $title ?>" data-cert-src="assets/img/Certs/<?= htmlspecialchars($certification['image'], ENT_QUOTES, 'UTF-8') ?>" aria-label="Preview <?= $title ?>">
+                                            <div class="cert-image-container">
+                                            <img src="assets/img/Certs/<?= htmlspecialchars($certification['image'], ENT_QUOTES, 'UTF-8') ?>" alt="<?= $title ?> certification" class="cert-image" draggable="false">
+                                                <div class="cert-overlay">
+                                                    <h4><?= $title ?></h4>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </article>
+                                <?php endforeach; ?>
                             </div>
-                        </article>
-
-                        <article class="certification-post">
-                            <div class="cert-image-container">
-                                <img src="assets/img/Certs/net-defense.png" alt="Fullstack PHP Training Certificate"
-                                    class="cert-image">
-                                <div class="cert-overlay">
-                                    <h4>Network Defense</h4>
-                                    <p>Learned network protection strategies, firewalls, intrusion prevention, and
-                                        incident response.</p>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="certification-post">
-                            <div class="cert-image-container">
-                                <img src="assets/img/Certs/cyber-threat.png" alt="Fullstack PHP Training Certificate"
-                                    class="cert-image">
-                                <div class="cert-overlay">
-                                    <h4>Cyber Threat Management</h4>
-                                    <p>Learned how to manage cyber threats.</p>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="certification-post">
-                            <div class="cert-image-container">
-                                <img src="assets/img/Certs/os.png" alt="Fullstack PHP Training Certificate"
-                                    class="cert-image">
-                                <div class="cert-overlay">
-                                    <h4>Operating system concepts</h4>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="certification-post">
-                            <div class="cert-image-container">
-                                <img src="assets/img/Certs/net-basics.png" alt="Fullstack PHP Training Certificate"
-                                    class="cert-image">
-                                <div class="cert-overlay">
-                                    <h4>Networking basics</h4>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="certification-post">
-                            <div class="cert-image-container">
-                                <img src="assets/img/Certs/endpoint.png" alt="Fullstack PHP Training Certificate"
-                                    class="cert-image">
-                                <div class="cert-overlay">
-                                    <h4>EndPoint Security</h4>
-                                    <p>Learned how to secure Endpoints.</p>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="certification-post">
-                            <div class="cert-image-container">
-                                <img src="assets/img/Certs/python.png" alt="Penetration Testing Certificate"
-                                    class="cert-image">
-                                <div class="cert-overlay">
-                                    <h4>Python for Security</h4>
-                                    <p>Utilized Python to develop security tools and perform ethical hacking
-                                        assessments.</p>
-                                </div>
-                            </div>
-                        </article>
+                        <?php endforeach; ?>
+                    </div>
                 </div>
+                <dialog class="cert-preview-dialog" aria-labelledby="cert-preview-title">
+                    <button class="cert-preview-close" type="button" aria-label="Close preview">&times;</button>
+                    <img class="cert-preview-image" src="" alt="">
+                    <p class="cert-preview-title" id="cert-preview-title"></p>
+                </dialog>
             </div>
 
             <div class="skills-section card bg-base-100" id="skills">
@@ -213,9 +170,9 @@
                 </div>
             </div>
 
-            <div class="projects-section card bg-base-100 mb-5" id="recent-projects">
-                <div class="flex justify-between items-center mb-4">
-                    <h2 class="section-title">Recent Projects</h2>
+            <div class="projects-section mb-5" id="recent-projects">
+                <div class="projects-section-header">
+                    <h2 class="section-title">Featured projects</h2>
                     <a href="projects.php" class="view-all-btn">
                         View All
                         <i data-lucide="arrow-right" aria-hidden="true"></i>

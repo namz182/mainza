@@ -197,26 +197,6 @@
     }
   });
 
-  // node_modules/lucide/dist/esm/icons/book-open-text.mjs
-  var BookOpenText;
-  var init_book_open_text = __esm({
-    "node_modules/lucide/dist/esm/icons/book-open-text.mjs"() {
-      BookOpenText = [
-        ["path", { d: "M12 5v16" }],
-        ["path", { d: "M16 13h2" }],
-        ["path", { d: "M16 9h2" }],
-        [
-          "path",
-          {
-            d: "M20.001 19A2 2 0 0022 17V5a2 2 0 00-1.999-2L16 3.002A5 5 0 0012 5a5 5 0 00-4-2H4a2 2 0 00-2 2v12a2 2 0 001.999 2H8a5 5 0 014 2 5 5 0 014-2z"
-          }
-        ],
-        ["path", { d: "M6 13h2" }],
-        ["path", { d: "M6 9h2" }]
-      ];
-    }
-  });
-
   // node_modules/lucide/dist/esm/icons/briefcase-business.mjs
   var BriefcaseBusiness;
   var init_briefcase_business = __esm({
@@ -249,22 +229,6 @@
         ["path", { d: "m18 16 4-4-4-4" }],
         ["path", { d: "m6 8-4 4 4 4" }],
         ["path", { d: "m14.5 4-5 16" }]
-      ];
-    }
-  });
-
-  // node_modules/lucide/dist/esm/icons/compass.mjs
-  var Compass;
-  var init_compass = __esm({
-    "node_modules/lucide/dist/esm/icons/compass.mjs"() {
-      Compass = [
-        ["circle", { cx: "12", cy: "12", r: "10" }],
-        [
-          "path",
-          {
-            d: "m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z"
-          }
-        ]
       ];
     }
   });
@@ -365,6 +329,19 @@
         ["rect", { width: "18", height: "18", x: "3", y: "3", rx: "2", ry: "2" }],
         ["circle", { cx: "9", cy: "9", r: "2" }],
         ["path", { d: "m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" }]
+      ];
+    }
+  });
+
+  // node_modules/lucide/dist/esm/icons/layout-dashboard.mjs
+  var LayoutDashboard;
+  var init_layout_dashboard = __esm({
+    "node_modules/lucide/dist/esm/icons/layout-dashboard.mjs"() {
+      LayoutDashboard = [
+        ["rect", { width: "7", height: "9", x: "3", y: "3", rx: "1" }],
+        ["rect", { width: "7", height: "5", x: "14", y: "3", rx: "1" }],
+        ["rect", { width: "7", height: "9", x: "14", y: "12", rx: "1" }],
+        ["rect", { width: "7", height: "5", x: "3", y: "16", rx: "1" }]
       ];
     }
   });
@@ -485,22 +462,6 @@
     }
   });
 
-  // node_modules/lucide/dist/esm/icons/send.mjs
-  var Send;
-  var init_send = __esm({
-    "node_modules/lucide/dist/esm/icons/send.mjs"() {
-      Send = [
-        [
-          "path",
-          {
-            d: "M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"
-          }
-        ],
-        ["path", { d: "m21.854 2.147-10.94 10.939" }]
-      ];
-    }
-  });
-
   // node_modules/lucide/dist/esm/icons/share-2.mjs
   var Share2;
   var init_share_2 = __esm({
@@ -575,11 +536,9 @@
     "node_modules/lucide/dist/esm/lucide.mjs"() {
       init_replaceElement();
       init_arrow_right();
-      init_book_open_text();
       init_briefcase_business();
       init_clock();
       init_code_xml();
-      init_compass();
       init_contact_round();
       init_download();
       init_external_link();
@@ -587,6 +546,7 @@
       init_graduation_cap();
       init_heart();
       init_image();
+      init_layout_dashboard();
       init_lightbulb();
       init_mail();
       init_map_pin();
@@ -595,7 +555,6 @@
       init_music_2();
       init_phone();
       init_plus();
-      init_send();
       init_share_2();
       init_shield_check();
       init_user_round();
@@ -652,11 +611,9 @@
       createIcons({
         icons: {
           ArrowRight,
-          BookOpenText,
           BriefcaseBusiness,
           Clock,
           CodeXml,
-          Compass,
           ContactRound,
           Download,
           ExternalLink,
@@ -665,6 +622,7 @@
           Heart,
           Image,
           Lightbulb,
+          LayoutDashboard,
           Mail,
           MapPin,
           Medal,
@@ -672,7 +630,6 @@
           Music2,
           Phone,
           Plus,
-          Send,
           Share2,
           ShieldCheck,
           UserRound,
@@ -694,11 +651,9 @@ lucide/dist/esm/shared/src/utils/toCamelCase.mjs:
 lucide/dist/esm/shared/src/utils/toPascalCase.mjs:
 lucide/dist/esm/replaceElement.mjs:
 lucide/dist/esm/icons/arrow-right.mjs:
-lucide/dist/esm/icons/book-open-text.mjs:
 lucide/dist/esm/icons/briefcase-business.mjs:
 lucide/dist/esm/icons/clock.mjs:
 lucide/dist/esm/icons/code-xml.mjs:
-lucide/dist/esm/icons/compass.mjs:
 lucide/dist/esm/icons/contact-round.mjs:
 lucide/dist/esm/icons/download.mjs:
 lucide/dist/esm/icons/external-link.mjs:
@@ -706,6 +661,7 @@ lucide/dist/esm/icons/folder-kanban.mjs:
 lucide/dist/esm/icons/graduation-cap.mjs:
 lucide/dist/esm/icons/heart.mjs:
 lucide/dist/esm/icons/image.mjs:
+lucide/dist/esm/icons/layout-dashboard.mjs:
 lucide/dist/esm/icons/lightbulb.mjs:
 lucide/dist/esm/icons/mail.mjs:
 lucide/dist/esm/icons/map-pin.mjs:
@@ -714,7 +670,6 @@ lucide/dist/esm/icons/message-circle.mjs:
 lucide/dist/esm/icons/music-2.mjs:
 lucide/dist/esm/icons/phone.mjs:
 lucide/dist/esm/icons/plus.mjs:
-lucide/dist/esm/icons/send.mjs:
 lucide/dist/esm/icons/share-2.mjs:
 lucide/dist/esm/icons/shield-check.mjs:
 lucide/dist/esm/icons/user-round.mjs:

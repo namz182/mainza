@@ -6,16 +6,16 @@
 
     <nav class="sidebar-nav" aria-label="Main navigation">
         <a href="index.php" class="sidebar-link <?php echo basename($_SERVER['PHP_SELF']) === 'index.php' ? 'active' : ''; ?>">
-            <i data-lucide="compass" aria-hidden="true"></i><span>Home</span>
+            <i data-lucide="layout-dashboard" aria-hidden="true"></i><span>Home</span>
         </a>
         <a href="about.php" class="sidebar-link <?php echo basename($_SERVER['PHP_SELF']) === 'about.php' ? 'active' : ''; ?>">
-            <i data-lucide="book-open-text" aria-hidden="true"></i><span>About</span>
+            <i data-lucide="user-round" aria-hidden="true"></i><span>About</span>
         </a>
         <a href="projects.php" class="sidebar-link <?php echo basename($_SERVER['PHP_SELF']) === 'projects.php' ? 'active' : ''; ?>">
             <i data-lucide="folder-kanban" aria-hidden="true"></i><span>Projects</span>
         </a>
         <a href="contact.php" class="sidebar-link <?php echo basename($_SERVER['PHP_SELF']) === 'contact.php' ? 'active' : ''; ?>">
-            <i data-lucide="send" aria-hidden="true"></i><span>Contact</span>
+            <i data-lucide="mail" aria-hidden="true"></i><span>Contact</span>
         </a>
     </nav>
 
@@ -24,7 +24,7 @@
     <nav class="sidebar-nav" aria-label="Portfolio shortcuts">
         <a href="index.php#certifications" class="sidebar-link"><i data-lucide="medal" aria-hidden="true"></i><span>Certifications</span></a>
         <a href="index.php#skills" class="sidebar-link"><i data-lucide="wrench" aria-hidden="true"></i><span>Skills & tools</span></a>
-        <a href="index.php#recent-projects" class="sidebar-link"><i data-lucide="image" aria-hidden="true"></i><span>Recent projects</span></a>
+        <a href="index.php#recent-projects" class="sidebar-link"><i data-lucide="image" aria-hidden="true"></i><span>Featured projects</span></a>
     </nav>
 </aside>
 
