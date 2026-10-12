@@ -1,4 +1,10 @@
 <?php include 'includes/header.php' ?>
+<?php require_once 'includes/gallery-data.php' ?>
+<?php
+$galleryPreview = gallery_images();
+shuffle($galleryPreview);
+$galleryPreview = array_slice($galleryPreview, 0, 4);
+?>
 <main class="feed-container social-layout">
     <?php include 'includes/sidebars.php' ?>
     <div class="portfolio-shell">
@@ -203,6 +209,24 @@
                     </article>
                 </div>
             </div>
+
+            <section class="gallery-preview-section" id="gallery">
+                <div class="projects-section-header">
+                    <h2 class="section-title">Gallery</h2>
+                    <a href="gallery.php" class="view-all-btn">
+                        View all
+                        <i data-lucide="arrow-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div class="gallery-grid gallery-grid--preview">
+                    <?php foreach ($galleryPreview as $image): ?>
+                        <button class="gallery-image-tile" type="button" data-photo-viewer-trigger data-photo-src="<?= htmlspecialchars($image['src'], ENT_QUOTES, 'UTF-8') ?>" data-photo-alt="<?= htmlspecialchars($image['alt'], ENT_QUOTES, 'UTF-8') ?>" aria-label="Preview <?= htmlspecialchars($image['alt'], ENT_QUOTES, 'UTF-8') ?>">
+                            <img src="<?= htmlspecialchars($image['src'], ENT_QUOTES, 'UTF-8') ?>" alt="<?= htmlspecialchars($image['alt'], ENT_QUOTES, 'UTF-8') ?>" width="<?= (int) $image['width'] ?>" height="<?= (int) $image['height'] ?>" loading="lazy" decoding="async">
+                        </button>
+                    <?php endforeach; ?>
+                </div>
+            </section>
     </div>
 </main>
+<?php include 'includes/photo-viewer.php' ?>
 <?php include 'includes/footer.php' ?>

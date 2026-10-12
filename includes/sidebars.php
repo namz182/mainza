@@ -14,6 +14,9 @@
         <a href="projects.php" class="sidebar-link <?php echo basename($_SERVER['PHP_SELF']) === 'projects.php' ? 'active' : ''; ?>">
             <i data-lucide="folder-kanban" aria-hidden="true"></i><span>Projects</span>
         </a>
+        <a href="gallery.php" class="sidebar-link <?php echo basename($_SERVER['PHP_SELF']) === 'gallery.php' ? 'active' : ''; ?>">
+            <i data-lucide="image" aria-hidden="true"></i><span>Gallery</span>
+        </a>
         <a href="contact.php" class="sidebar-link <?php echo basename($_SERVER['PHP_SELF']) === 'contact.php' ? 'active' : ''; ?>">
             <i data-lucide="mail" aria-hidden="true"></i><span>Contact</span>
         </a>

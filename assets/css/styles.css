@@ -155,6 +155,19 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--blue); outline-
 .cert-preview-image { display: block; max-width: min(92vw, 1000px); max-height: 82vh; object-fit: contain; border-radius: 16px 16px 0 0; }
 .cert-preview-title { margin: 0; padding: 12px 16px; color: var(--ink); font-size: 14px; font-weight: 600; }
 .cert-preview-close { position: absolute; top: 10px; right: 10px; z-index: 1; display: grid; width: 36px; height: 36px; place-items: center; padding: 0; border: 0; border-radius: 50%; background: rgb(255 255 255 / 94%); color: var(--ink); font-size: 25px; line-height: 1; cursor: pointer; }
+.photo-viewer-dialog { position: fixed; grid-template-columns: 48px minmax(0, 1fr) 48px; align-items: center; gap: 12px; width: min(96vw, 1400px); max-width: 96vw; max-height: 94vh; padding: 56px 20px 16px; overflow: visible; border: 1px solid var(--line); border-radius: 18px; background: var(--surface); color: var(--ink); box-shadow: 0 18px 64px rgb(0 0 0 / 30%); }
+.photo-viewer-dialog[open] { display: grid; }
+.photo-viewer-dialog::backdrop { background: rgb(24 31 39 / 78%); backdrop-filter: blur(3px); }
+.cert-preview-dialog, .photo-viewer-dialog { position: fixed; inset: 50% auto auto 50%; margin: 0; transform: translate(-50%, -50%); }
+.photo-viewer-figure { display: grid; justify-items: center; gap: 10px; min-width: 0; max-height: calc(94vh - 72px); margin: 0; }
+.photo-viewer-image { display: block; max-width: 100%; max-height: calc(94vh - 130px); object-fit: contain; border-radius: 8px; }
+.photo-viewer-caption { display: flex; justify-content: space-between; gap: 20px; width: 100%; color: var(--text-soft); font-size: 13px; }
+.photo-viewer-count { flex: 0 0 auto; font-variant-numeric: tabular-nums; }
+.photo-viewer-close, .photo-viewer-control { display: grid; place-items: center; border: 0; border-radius: 50%; background: var(--soft); color: var(--ink); cursor: pointer; transition: background .18s ease, color .18s ease; }
+.photo-viewer-close:hover, .photo-viewer-control:hover { background: var(--blue); color: white; }
+.photo-viewer-close { position: absolute; top: 12px; right: 12px; z-index: 1; width: 38px; height: 38px; padding: 0; font-size: 27px; line-height: 1; }
+.photo-viewer-control { width: 44px; height: 44px; padding: 0; font-size: 38px; line-height: 1; }
+.photo-viewer-control:focus-visible, .photo-viewer-close:focus-visible { outline-offset: 3px; }
 .skills-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
 .skill-category { padding: 15px; border-radius: 14px; background: var(--soft); }
 .skill-category-title { display: flex; align-items: center; gap: 8px; margin: 0 0 12px; font-size: 14px; font-weight: 650; }
@@ -172,6 +185,14 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--blue); outline-
 .project-preview-post img { width: 100%; aspect-ratio: 16 / 8; object-fit: cover; transition: transform .25s ease; }
 .project-preview-post > a:hover img { transform: scale(1.025); }
 .project-desc { color: var(--text-soft); font-size: 13px; }
+.gallery-preview-section { display: grid; gap: 8px; }
+.gallery-grid { column-count: 3; column-gap: 12px; }
+.gallery-grid--preview { column-count: 2; }
+.gallery-image-tile { display: inline-block; width: 100%; margin: 0 0 12px; padding: 0; overflow: hidden; break-inside: avoid; border: 0; border-radius: 13px; background: var(--surface); color: inherit; text-align: initial; vertical-align: top; cursor: zoom-in; appearance: none; }
+.gallery-image-tile img { display: block; width: 100%; height: auto; transition: transform .25s ease; }
+.gallery-image-tile:hover img { transform: scale(1.025); }
+.gallery-image-tile:focus-visible { outline-offset: 3px; }
+.gallery-page-section { min-width: 0; }
 .view-all-btn { display: inline-flex; align-items: center; gap: 6px; color: var(--muted); text-decoration: none; font-size: 13px; font-weight: 600; }
 .view-all-btn:hover { color: var(--blue); }
 .view-all-btn svg { width: 16px; height: 16px; }
@@ -266,6 +287,11 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--blue); outline-
   .content-section, .certifications-section, .skills-section, .projects-section, .contact-info, .contact-social, .response-card, .project-post { padding: 18px; }
   .page-title { font-size: 24px; }
   .values-grid, .skills-grid, .contact-methods, .projects-list { grid-template-columns: 1fr; }
+  .gallery-grid { column-count: 2; }
+  .photo-viewer-dialog { grid-template-columns: 38px minmax(0, 1fr) 38px; gap: 6px; width: 100vw; max-width: 100vw; max-height: 100dvh; padding: 58px 8px 14px; border-radius: 0; }
+  .photo-viewer-figure { max-height: calc(100dvh - 90px); }
+  .photo-viewer-image { max-height: calc(100dvh - 150px); }
+  .photo-viewer-control { width: 36px; height: 36px; }
   .project-gallery { grid-template-rows: 130px; }
   .project-gallery--multiple { grid-template-rows: repeat(2, 100px); }
   .site-footer { width: min(100% - 24px, 560px); padding-bottom: calc(76px + env(safe-area-inset-bottom)); }
@@ -277,6 +303,7 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--blue); outline-
   .nav-btn svg { width: 20px; height: 20px; }
   .profile-image, .profile-image img { width: 70px; height: 70px; }
   .hero-title { font-size: 24px; }
+  .gallery-grid { column-count: 1; }
   .project-gallery, .project-gallery--multiple { grid-template-rows: 90px; }
   .project-gallery--multiple { grid-template-rows: repeat(2, 78px); }
 }

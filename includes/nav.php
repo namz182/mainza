@@ -15,6 +15,9 @@
                 <a href="projects.php" class="nav-btn <?php echo basename($_SERVER['PHP_SELF']) == 'projects.php' ? 'active' : ''; ?>" title="Projects">
                     <i data-lucide="folder-kanban" aria-hidden="true"></i>
                 </a>
+                <a href="gallery.php" class="nav-btn <?php echo basename($_SERVER['PHP_SELF']) == 'gallery.php' ? 'active' : ''; ?>" title="Gallery">
+                    <i data-lucide="image" aria-hidden="true"></i>
+                </a>
                 <a href="contact.php" class="nav-btn <?php echo basename($_SERVER['PHP_SELF']) == 'contact.php' ? 'active' : ''; ?>" title="Contact">
                     <i data-lucide="mail" aria-hidden="true"></i>
                 </a>
